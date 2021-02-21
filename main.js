@@ -24,7 +24,7 @@ function initConfig(){
     let mapBackgroundColor = "#ffffff"
     let mapStrokeColor = "#ffffff"
     let highlightDistricts = ["Hamburg", "Hessen"]
-    let mapTitle = "54°30′56″ N 13°38′40″ O"
+    let mapTitle = "Hamburg meets Hessen"
     let mapSubtitle = "11.11.2020"
     let fontFamily = "courier new"
     let container = d3.select("#Map")
@@ -193,7 +193,7 @@ function initInputElements(store) {
     
     // TODO: Adds input field event listener for font color
 
-    
+
     // Adds input field event listener for title
     d3.select("#mapTitle")
         .attr("value", mapTitle)

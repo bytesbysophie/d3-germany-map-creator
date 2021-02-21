@@ -7,6 +7,8 @@
     <script src="main.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500;600&family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <style>
 
         body {
@@ -26,21 +28,27 @@
     </style>
 </head>
 <body>
-    <section>
-        <svg id="Map"></svg>
-    </section>
-    <section id="Config">
-        <label for="mapBaseColor"><input id="mapBaseColor" type="color"/> Map Base Color</label>
-        <label for="mapHighlightColor"><input id="mapHighlightColor" type="color"/> Map Highlight Color</label>
-        <label for="mapBackgroundColor"><input id="mapBackgroundColor" type="color"/> Map Background Color</label>
-        <label for="mapStrokeColor"><input id="mapStrokeColor" type="color"/> Map Stroke Color</label>
-        <label for="mapTitle">Title</label>
-        <input id="mapTitle" type="text"/>
-        <p>Show Date in Subtitle:</p>
-        <label for="mapSubtitleYes"><input id="mapSubtitleYes" name="subtitle" type="radio" value="yes" checked> Yes</label>
-        <label for="mapSubtitleNo"><input id="mapSubtitleNo" name="subtitle" type="radio" value="no"> No</label>
-        <label for="mapSubtitle"><input id="mapSubtitle" type="date"/> Date</label>
-        <button id="download">Save As PNG</button>
-    </section>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div id="Config" class="sidebar-sticky">
+                    <label for="mapBaseColor"><input id="mapBaseColor" type="color"/> Map Base Color</label>
+                    <label for="mapHighlightColor"><input id="mapHighlightColor" type="color"/> Map Highlight Color</label>
+                    <label for="mapBackgroundColor"><input id="mapBackgroundColor" type="color"/> Map Background Color</label>
+                    <label for="mapStrokeColor"><input id="mapStrokeColor" type="color"/> Map Stroke Color</label>
+                    <label for="mapTitle">Title</label>
+                    <input id="mapTitle" type="text"/>
+                    <p>Show Date in Subtitle:</p>
+                    <label for="mapSubtitleYes"><input id="mapSubtitleYes" name="subtitle" type="radio" value="yes" checked> Yes</label>
+                    <label for="mapSubtitleNo"><input id="mapSubtitleNo" name="subtitle" type="radio" value="no"> No</label>
+                    <label for="mapSubtitle"><input id="mapSubtitle" type="date"/> Date</label>
+                    <button id="download">Save As PNG</button>
+                </div>
+            </nav>
+            <section>
+                <svg id="Map"></svg>
+            </section>
+        </div>
+    </div>
 </body>
 </html>
